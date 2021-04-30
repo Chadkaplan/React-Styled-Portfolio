@@ -1,9 +1,7 @@
 import React from "react";
-import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import '../App.css';
 
 function HomePage() {
@@ -30,8 +28,8 @@ function HomePage() {
         </p>
         <div className="icons">
           <br></br>
-          <a target="_blank" href="https://github.com/Chadkaplan"> <FontAwesomeIcon icon={faGithub} className="icon gh" id="giticon" size="6x"/></a>
-          <a target="_blank" href="https://www.linkedin.com/in/chad-kaplan-599186198/"> <FontAwesomeIcon icon={faLinkedin} className="icon gh" id="linkedinicon" size="6x"/></a>
+          <a href="https://github.com/Chadkaplan"> <FontAwesomeIcon icon={faGithub} className="icon gh" id="giticon" size="6x"/></a>
+          <a href="https://www.linkedin.com/in/chad-kaplan-599186198/"> <FontAwesomeIcon icon={faLinkedin} className="icon gh" id="linkedinicon" size="6x"/></a>
         </div>
       </header>
     </div>

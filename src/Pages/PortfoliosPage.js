@@ -1,14 +1,16 @@
 import React from 'react';
 import Categories from '../Components/Categories';
 import MenuItems from '../Components/MenuItems';
-import Title from '../Components/Title';
+// import Title from '../Components/Title';
 import portfolios from '../Components/allportfolios';
 import { useState } from 'react';
 
 const allCategories = ['All', ...new Set(portfolios.map(item => item.category))];
 
 function PortfoliosPage() {
-    const [categories, setCategories] = useState(allCategories);
+    // When adding in categories state, use below
+    // const [categories, setCategories] = useState(allCategories);
+    const [categories] = useState(allCategories);
     const [menuItems, setMenuItems] = useState(portfolios);
 
     const filter = (category) =>{

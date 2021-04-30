@@ -1,5 +1,4 @@
 import React from 'react';
-import Title from '../Components/Title';
 import allBlogs from '../Components/allBlogs';
 
 function BlogsPage() {
