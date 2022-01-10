@@ -1,6 +1,4 @@
-.SkillsSection{
-   
-}
+// Style sheets grow so fast in projects. One way to help keep it manageable to is to delete unused selectors
 
 .skills-container{
     .skill-title{
@@ -11,8 +9,6 @@
     .skill-bar{
         display: flex;
         align-items: center;
-        .skill-text{
-        }
         .skill-progress{
             width: 100%;
            .progress{

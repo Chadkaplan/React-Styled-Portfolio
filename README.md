@@ -1,3 +1,8 @@
+<!-- READMEs are often neglected but actually help others who read your code quite a bit
+    Adding info about the url where this is deployed would be great
+    Trim out the info that isn't relevant
+    And maybe some information about your repo and some design decisions (e.g why scss, explain your file structure, etc)
+ -->
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

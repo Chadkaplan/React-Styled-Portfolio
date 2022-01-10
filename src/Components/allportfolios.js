@@ -1,3 +1,5 @@
+// I think we should move this out of the Components folder as there's no components defined
+// Maybe add a new folder called data?
 import port1 from '../img/portImages/maya-1.jpg';
 import port2 from '../img/portImages/port1.jpg';
 import port3 from '../img/portImages/port2.jpg';

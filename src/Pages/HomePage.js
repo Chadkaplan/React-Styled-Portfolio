@@ -1,7 +1,7 @@
-import React from "react";
+// No longer needed
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { Link } from "react-router-dom";
+// Cleanup imports
 import '../App.css';
 
 function HomePage() {
@@ -27,9 +27,15 @@ function HomePage() {
           page!
         </p>
         <div className="icons">
-          <br></br>
-          <a href="https://github.com/Chadkaplan"> <FontAwesomeIcon icon={faGithub} className="icon gh" id="giticon" size="6x"/></a>
-          <a href="https://www.linkedin.com/in/chad-kaplan-599186198/"> <FontAwesomeIcon icon={faLinkedin} className="icon gh" id="linkedinicon" size="6x"/></a>
+          {/* The br tag can be self closing */}
+          <br />
+          {/* Putting the icons on their own line makes this easier to read */}
+          <a href="https://github.com/Chadkaplan">
+            <FontAwesomeIcon icon={faGithub} className="icon gh" id="giticon" size="6x"/>
+          </a>
+          <a href="https://www.linkedin.com/in/chad-kaplan-599186198/">
+            <FontAwesomeIcon icon={faLinkedin} className="icon gh" id="linkedinicon" size="6x"/>
+          </a>
         </div>
       </header>
     </div>

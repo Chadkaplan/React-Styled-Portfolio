@@ -1,3 +1,5 @@
+// I think we should move this out of the Components folder as there's no components defined
+// Maybe add a new folder called data?
 import blog1 from '../img/blogs/blog1.svg';
 import blog2 from '../img/blogs/blog2.svg';
 import blog3 from '../img/blogs/blog3.svg';
