@@ -1,17 +1,17 @@
-import React from 'react'
 import headshot from '../img/chadheadshot.jpg';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     return (
         <div className="NavBar">
             <nav className="nav">
                 <div className="profile">
-                    <img src={headshot} alt=""/>
+                    <img src={headshot} alt="headshot"/>
                  </div>
 
                 <ul className="nav-items">
                     <li className="nav-item">
+                        {/* Same comments here as in App.js about routes */}
                         <NavLink to="/" exact activeClassName="active">
                             Home
                         </NavLink>
@@ -40,6 +40,7 @@ function Navbar() {
 
                 <footer className="footer">
                     <p>
+                        {/* Lets use the js date object to get the current year instead of hard-coding */}
                         @2021 Chad Kaplan
                     </p>
             </footer>

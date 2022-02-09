@@ -4,11 +4,18 @@
   "publicPath" : "/",
   "version": "0.1.0",
   "private": true,
+  /**
+  * Review these and see which can be updated
+  * Keeping dependencies up to date is always a challenge
+  * but the longer you wait, the harder it is
+  */
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    // Several of these can go into devDependencies
+    // Modern bundlers dont really care, but it does show you understand the difference
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",

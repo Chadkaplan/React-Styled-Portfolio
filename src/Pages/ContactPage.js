@@ -1,15 +1,18 @@
-import React from "react";
-import ContactItem from "../Components/ContactItem";
-import phone from "../img/phone.svg";
-import email from "../img/emailme.svg";
-import location from "../img/location.svg";
-// import Title from "../Components/Title";
+// No longer needed
+// We should try to be consistent with double vs single quote usage. Looks like the rest of the repo uses
+// single quote for imports
+import ContactItem from '../Components/ContactItem';
+import phone from '../img/phone.svg';
+import email from '../img/emailme.svg';
+import location from '../img/location.svg';
+// Clean up imports
 
 function ContactPage() {
   return (
     <div>
       <div className="title">
-        <title title={"About Me"} span={"About Me"} />
+        {/* Should use a different html element */}
+        <title title="About Me" span="About Me" />
       </div>
       <div className="ContactPage">
         <div className="map-sect">
@@ -26,17 +29,10 @@ function ContactPage() {
           ></iframe>
         </div>
         <div className="contact-sect">
-          <ContactItem icon={phone} title={"Phone"} text1={"(954) 552-1022"} />
-          <ContactItem
-            icon={email}
-            title={"Email"}
-            text1={"ChadKaplanDev@gmail.com"}
-          />
-          <ContactItem
-            icon={location}
-            title={"Address"}
-            text1={"Coral Springs, Florida"}
-          />
+          <ContactItem icon={phone} title="Phone" text1="(954) 552-1022" />
+          {/* Consistency makes reading the code easier. Since these lines aren't too long, lets include all in one line */}
+          <ContactItem icon={email} title="Email" text1="ChadKaplanDev@gmail.com"/>
+          <ContactItem icon={location} title="Address" text1="Coral Springs, Florida"/>
         </div>
       </div>
     </div>

@@ -1,20 +1,27 @@
-import React from 'react';
+import { useCallback } from 'react';
 import Categories from '../Components/Categories';
 import MenuItems from '../Components/MenuItems';
-// import Title from '../Components/Title';
+// Clean up
 import portfolios from '../Components/allportfolios';
 import { useState } from 'react';
 
-const allCategories = ['All', ...new Set(portfolios.map(item => item.category))];
+// Lets make 'All' a constant
+// It seems like a bit overkill now, but imagine if the usage of 'All' grows
+// and then you need to refactor it to be some other string,
+// having it as a constant would make the refactor much easier since you
+// only need to change it in one spot
+const ALL = 'All';
+const allCategories = [ALL, ...new Set(portfolios.map(item => item.category))];
 
 function PortfoliosPage() {
     // When adding in categories state, use below
     // const [categories, setCategories] = useState(allCategories);
-    const [categories] = useState(allCategories);
+    // Looks like we don't need to keep categories in state
     const [menuItems, setMenuItems] = useState(portfolios);
 
-    const filter = (category) =>{
-        if(category === 'All'){
+    // Lets memoize this function since its used as a prop
+    const filter = useCallback((category) =>{
+        if(category === ALL){
             setMenuItems(portfolios)
             return;
         }
@@ -22,15 +29,16 @@ function PortfoliosPage() {
             return item.category === category;
         })
         setMenuItems(filteredData);
-    }
+    }, []);
 
     return (
         <div className="PortfolioPage">
             <div className="title">
-                <title title={'Portfolios'} span={'portfolios'} />
+                {/* Lets use a different element here */}
+                <title title="Portfolios" span="portfolios" />
             </div>
             <div className="portfolios-data">
-                <Categories filter={filter} categories={categories} />
+                <Categories filter={filter} categories={allCategories} />
                 <MenuItems menuItem={menuItems} />
             </div>
         </div>
